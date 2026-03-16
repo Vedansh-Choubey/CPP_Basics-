@@ -56,31 +56,71 @@
 
 
           //Multiple Inheritance 
+//#include <iostream>
+//using namespace std;
+
+//class Father {
+//public:
+//    void skill1() {
+//        cout << "Intelligence from father" << endl;
+//    }
+//};
+
+//class Mother {
+//public:
+//    void skill2() {
+//        cout << "Nature from mother" << endl;
+//    }
+//};
+
+//class Child : public Father, public Mother {
+//void skill() {
+//        cout << "His Personal Quality " << endl;
+//};
+
+//int main() {
+//    Child c;
+//    c.skill();
+//    c.skill1();
+//    c.skill2();
+//}
+
+
+            //Hierarchical Inheritance 
 #include <iostream>
 using namespace std;
 
-class Father {
+class Animal {
 public:
-    void skill1() {
-        cout << "Intelligence from father" << endl;
+    void eat() {
+        cout << "Animal eats food" << endl;
     }
 };
 
-class Mother {
+class Dog : public Animal {
 public:
-    void skill2() {
-        cout << "Nature from mother" << endl;
+    void bark() {
+        cout << "Dog barks" << endl;
     }
 };
 
-class Child : public Father, public Mother {
-void skill() {
-        cout << "His Personal Quality " << endl;
+class Cat : public Animal {
+public:
+    void meow() {
+        cout << "Cat meows" << endl;
+    }
 };
 
 int main() {
-    Child c;
-    c.skill();
-    c.skill1();
-    c.skill2();
+    Dog d;
+    Cat c;
+
+    d.eat();
+    d.bark();
+
+    c.eat();
+    c.meow();
+
+         //c.bark();       Invalid Operation 
+         //d.meow();       Invalid Operation 
 }
