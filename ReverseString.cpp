@@ -10,7 +10,7 @@ int main() {
         reverse += str[i];
     }
 
-    cout << "Reversed: " << reverse;
+    cout << "Reversed String Will Be: " << reverse;
 
     return 0;
 }
