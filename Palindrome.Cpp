@@ -13,10 +13,10 @@ int main() {
         n /= 10;
     }
 
-    if(original = rev)
-        cout << "Palindrome";
+    if(original == rev)
+        cout << "Number is Palindrome";
     else
-        cout << "Not Palindrome";
+        cout << "Number is Not Palindrome";
 
     return 0;
 }
