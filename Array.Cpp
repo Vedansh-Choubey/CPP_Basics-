@@ -9,7 +9,7 @@ int main() {                  // Defining Array
 
                               // Change element
     arr[2] = 99;
-    cout << "Array After Changing element: " << arr[2] << endl;
+    cout << "Array After Changing element: " << arr[] << endl;
 
                               // Delete element (shift left)
     int index = 2;
