@@ -1,4 +1,4 @@
-#inclue <iostream>
+#include <iostream>
 using namespace std;
 int main (){
   double a, b;
@@ -7,5 +7,5 @@ int main (){
   cout<<"Enter Side 'B' of Ractangle: ";
   cin>>b;
 
-  cout<<"Area of the Ractangle = "<<a*b;
+  cout<<"Area of the Ractangle with sides "<<a<<" and "<<b<<" is: "<<a*b;
 }
