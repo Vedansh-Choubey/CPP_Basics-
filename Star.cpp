@@ -41,12 +41,12 @@ int main() {
 
         // space lane ke liye 
         for(int j = 1; j <= n - i; j++) {
-            cout << ".";
+            cout << " ";
         }
 
         // stars
-        for(int j = 1; j <= 2*i ; j++) {
-            cout << "*";
+        for(int j = 1; j <= 2*i - 1 ; j++) {   // 2i starts with 2* we want 1* at Starting 
+            cout << "*"; 
         }
 
         cout << endl;
