@@ -15,7 +15,7 @@ int main() {
     cout << "Enter the start and end of the range: ";
     cin >> start >> end;
 
-    cout << "Prime numbers in the range are: ";
+    cout << "Prime numbers in the range "<<start<<" and "<<end<<" are: ";
     for (int i = start; i <= end; i++) {
         if (isPrime(i)) {
             cout << i << " ";
