@@ -9,16 +9,17 @@ int main() {
     bool isPalindrome = true;
 
     for(int i = 0; i < str.length()/2; i++) {
-        if(str[i] != str[str.length()-i-1) {
+        if(str[i] != str[str.length()-i-1]) {
             isPalindrome = false;
             break;
         }
     }
 
-    if(isPalindrome)
+    if(isPalindrome){
         cout << "Entered string is Palindrome";
-    else
-        cout << "Entered String is Not Palindrome";
-
+    } else{
+        cout << "Entered String is Not Palindrome"<<endl;
+        cout << "Try With Another String !!";
+    }
     return 0;
 }
