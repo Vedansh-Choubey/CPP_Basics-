@@ -29,7 +29,7 @@ int main() {
       cout << "Enter Hypotenuse of the triangle: ";
       cin >> Hypotenuse;
 
-     Height = (Hypotenuse*Hypotenuse - Base*Base);      //If one side and Hypotenuse is given
+     Height = sqrt (Hypotenuse*Hypotenuse - Base*Base);      //If one side and Hypotenuse is given
 
     cout<<"The Other Side of The Tringle Will Be: "<<Height<<endl;
     return 0;
