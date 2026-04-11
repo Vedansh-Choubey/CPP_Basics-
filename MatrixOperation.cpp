@@ -49,4 +49,78 @@ int main() {
      }
 }  */
 
+     int a[10][10], b[10][10], result[10][10];
+     int size, n;
+
+    cout<< "Select Size Of Matrix: "<<endl;
+    cout<< "1. 2x2\n";
+    cout<< "2. 3x3\n";
+    cout<< "3. n x n\n";
+    cin>> size;
+
+    if(size == 1) {
+         n = 2;
+    }else if(size = 2){
+         n = 3;
+    }else {
+        cout << "Enter value of n: ";
+        cin >> n;
+    }
+
+    cout << "Enter elements of Matrix A:\n";
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            cin >> a[i][j]
+        }
+    }
+
+    cout << "Enter elements of Matrix B:\n";
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            cin >> b[i][j];
+        }
+    }
+
+    int operation;
+    cout<< "Choose the Operation to be Performed:\n";
+    cout <<"1. Addition Of Matrix\";
+    cout <<"2. Subtraction Of Matrix\n";
+    cout <<"3. Multiplication Of Matrix\n";
+    cin >> operation;
+
+    if(operation == 1){
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                result[i][j] = a[i][j] + b[i][j];
+            }
+        }
+    }
+    else if(operation == 2){
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                result[i][j] = a[i][j] - b[i][j];
+            }
+        }
+    }
+    else if(operation == 3){
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                result[i][j] = 0;
+                for(int k = 0; k < n; k++){
+                    result[i][j] += a[i][k] * b[k][j];
+                }
+            }
+        }
+    }
+
+    cout << "Result Matrix:\n";
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            cout << result[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
 }
+
