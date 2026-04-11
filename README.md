@@ -10,15 +10,16 @@ A collection of basic to intermediate C++ programs created for learning and prac
 This repository contains simple and easy-to-understand C++ programs.  
 It is designed for beginners to learn core programming concepts and improve problem-solving skills.
 
+
 ---
 
 ## 🚀 Features
 
 - Beginner-friendly programs  
 - Covers fundamental C++ concepts  
-- Clean and simple code  
+- Clean, simple and working codes 
 - Useful for practice and revision  
-
+- Useful For Basic covering
 ---
 
 ## 📂 Topics Covered
