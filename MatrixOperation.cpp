@@ -70,7 +70,7 @@ int main() {
     cout << "Enter elements of Matrix A:\n";
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
-            cin >> a[i][j]
+            cin >> a[i][j];
         }
     }
 
@@ -83,7 +83,7 @@ int main() {
 
     int operation;
     cout<< "Choose the Operation to be Performed:\n";
-    cout <<"1. Addition Of Matrix\";
+    cout <<"1. Addition Of Matrix\n";
     cout <<"2. Subtraction Of Matrix\n";
     cout <<"3. Multiplication Of Matrix\n";
     cin >> operation;
