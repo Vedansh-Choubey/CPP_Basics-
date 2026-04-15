@@ -50,7 +50,7 @@ int main() {
     int choice;
 
     do {
-        cout << "\n1.Deposit\n2.Withdraw\n3.Display4.Exit\n";
+        cout << "\n1.Deposit\n2.Withdraw\n3.Display4\n.Exit\n";
         cout << "Enter choice: ";
         cin >> choice;
 
