@@ -22,7 +22,7 @@ public:
         double amount;
         cout << "Enter amount to deposit: ";
         cin >> amount;
-        balance = amount;
+        balance += amount;
     }
 
     void withdraw() {
