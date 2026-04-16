@@ -49,4 +49,27 @@ double divide(double a, double b) {
     return a / b;
 }
 
+int main() {
+    int choice;
+    double num1, num2;
 
+    cout << "Welcome to your simple calculator!\n";
+
+    do {
+        cout << "\nWhat would you like to do?\n";
+        cout << "1. Add numbers\n";
+        cout << "2. Subtract numbers\n";
+        cout << "3. Multiply numbers\n";
+        cout << "4. Divide numbers\n";
+        cout << "5. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        if (choice >= 1 && choice <= 4) {
+            cout << "\nEnter first number: ";
+            cin >> num1;
+            cout << "Enter second number: ";
+            cin >> num2;
+        }
+
+        
