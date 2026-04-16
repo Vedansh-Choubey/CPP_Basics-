@@ -29,6 +29,8 @@ using namespace std;
     return 0;*/
 
 // Functions for operations.          //Menu Based Calculator 
+
+// Functions
 double add(double a, double b) {
     return a + b;
 }
@@ -43,7 +45,7 @@ double multiply(double a, double b) {
 
 double divide(double a, double b) {
     if (b == 0) {
-        cout << "\nOops! You can't divide by zero.\n";
+        cout << "Error: Cannot divide by zero!\n";
         return 0;
     }
     return a / b;
@@ -53,23 +55,47 @@ int main() {
     int choice;
     double num1, num2;
 
-    cout << "Welcome to your simple calculator!\n";
-
     do {
-        cout << "\nWhat would you like to do?\n";
-        cout << "1. Add numbers\n";
-        cout << "2. Subtract numbers\n";
-        cout << "3. Multiply numbers\n";
-        cout << "4. Divide numbers\n";
+        cout << "\n  ●MENU \n";
+        cout << "1. Addition\n";
+        cout << "2. Subtraction\n";
+        cout << "3. Multiplication\n";
+        cout << "4. Division\n";
         cout << "5. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
         if (choice >= 1 && choice <= 4) {
-            cout << "\nEnter first number: ";
-            cin >> num1;
-            cout << "Enter second number: ";
-            cin >> num2;
+            cout << "Enter two numbers: ";
+            cin >> num1 >> num2;
         }
 
-        
+        switch (choice) {
+            case 1:
+                cout << "Result = " << add(num1, num2);
+                break;
+
+            case 2:
+                cout << "Result = " << subtract(num1, num2);
+                break;
+
+            case 3:
+                cout << "Result = " << multiply(num1, num2);
+                break;
+
+            case 4:
+                cout << "Result = " << divide(num1, num2);
+                break;
+
+            case 5:
+                cout << "Program exited.\n";
+                break;
+
+            default:
+                cout << "Invalid choice!\n";
+        }
+
+    } while (choice != 5);
+
+    return 0;
+}
