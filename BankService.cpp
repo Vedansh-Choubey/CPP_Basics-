@@ -76,7 +76,7 @@ int main() {
     return 0;
 }*/
 
-class BankAccount{
+class BankAccount{                                   // Updated With Pin function 
     private:
     string name; int accNo; int pin; double balance;
     public:
