@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class BankAccount {
+/*class BankAccount {
 public:
     string name;
     int accNo;
@@ -74,4 +74,42 @@ int main() {
     } while (choice != 4);
 
     return 0;
-}
+}*/
+
+class BankAccount (){
+    private:
+    string name; int accNo; int pin; double balance;
+
+    void create (){
+        cout <<"Enter Name: ";
+        ignore cin();
+        getline (cin, name);
+
+        cout <<"Account Number: ";  
+        cin >>accNo;
+
+      
+        cout <<" Set a Four Digit pin: ";
+        cin>>pin;
+
+        cout <<" Neter Initial Balance: ";
+        cin >>balance;
+
+        if (balance<0){
+            cout <<" Balance Can't Be Negative So Setting it to Zero ";
+            balance = 0;
+        }
+    }
+
+     bool VerifyPin (){
+         int enteredPin;
+         cout <<" Enter a Pin: ";
+         cin >>enteredPin;
+
+        if (enteredPin == pin){
+             return true;
+        }else{
+              cout <<" Entered Pin is Incorrect !!";
+             return flse;
+        }
+     }
