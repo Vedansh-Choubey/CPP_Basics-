@@ -113,3 +113,31 @@ class BankAccount (){
              return flse;
         }
      }
+
+    void deposit() {
+        double amount;
+        cout << "Enter amount to deposit: ";
+        cin >> amount;
+ 
+        if (amount <= 0) {
+            cout << "Invalid amount Entered!"<<endl;
+            return;
+        }
+       
+        balance += amount;
+        cout << "Deposit successfull!"<<endl;
+    }
+
+    void display() {
+        cout <<endl<<"-- Account Details --<<endl;
+        cout << "Name: " << name << endl;
+        cout << "Account No: " << accNo << endl;
+        cout << "Balance: " << balance << endl;
+    }
+};
+int main() {
+    BankAccount b;
+    b.create();
+
+    
+
