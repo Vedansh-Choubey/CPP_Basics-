@@ -76,41 +76,41 @@ int main() {
     return 0;
 }*/
 
-class BankAccount (){
+class BankAccount{
     private:
     string name; int accNo; int pin; double balance;
-
+    public:
     void create (){
         cout <<"Enter Name: ";
-        ignore cin();
+        cin.ignore();
         getline (cin, name);
 
         cout <<"Account Number: ";  
         cin >>accNo;
 
       
-        cout <<" Set a Four Digit pin: ";
+        cout <<"Set a Four Digit pin: ";
         cin>>pin;
 
-        cout <<" Neter Initial Balance: ";
+        cout <<"Enter Initial Balance: ";
         cin >>balance;
 
         if (balance<0){
-            cout <<" Balance Can't Be Negative So Setting it to Zero ";
+            cout <<"Balance Can't Be Negative So Setting it to Zero ";
             balance = 0;
         }
     }
 
-     bool VerifyPin (){
+     bool verifyPin (){
          int enteredPin;
-         cout <<" Enter a Pin: ";
+         cout <<"Enter a Pin: ";
          cin >>enteredPin;
 
         if (enteredPin == pin){
              return true;
         }else{
               cout <<" Entered Pin is Incorrect !!";
-             return flse;
+             return false;
         }
      }
 
@@ -127,9 +127,26 @@ class BankAccount (){
         balance += amount;
         cout << "Deposit successfull!"<<endl;
     }
+    
+    void withdraw() {
+        double amount;
+        cout << "Enter amount to withdraw: ";
+        cin >> amount;
 
+        if (amount <= 0) {
+            cout << "Invalid amount!\n";
+            return;
+        }
+
+        if (amount > balance)
+            cout << "Insufficient Balance!\n";
+        else {
+            balance -= amount;
+            cout << "Withdrawal successful!\n";
+        }
+    }
     void display() {
-        cout <<endl<<"-- Account Details --<<endl;
+        cout <<"\n-- Account Details --\n";
         cout << "Name: " << name << endl;
         cout << "Account No: " << accNo << endl;
         cout << "Balance: " << balance << endl;
@@ -139,5 +156,36 @@ int main() {
     BankAccount b;
     b.create();
 
-    
+    int choice;
+    do {
+
+        cout<<"\n_____MENU_____\n";
+        cout << "1. Deposit\n2. Withdraw\n3. Display\n4. Exit\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                if (b.verifyPin())
+                    b.deposit();
+                break;
+            case 2:
+                if (b.verifyPin())
+                    b.withdraw();
+                break;
+            case 3:
+                if (b.verifyPin())
+                    b.display();
+                break;
+            case 4:
+                cout << "Thank You!\n";
+                break;
+
+         default:
+                cout << "Invalid choice! Try again.\n";
+        }
+} while (choice != 4);
+
+    return 0;
+}
 
