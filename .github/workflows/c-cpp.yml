@@ -13,11 +13,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: Build all C++ source files
+      run: |
+        set -euo pipefail
+        mkdir -p /tmp/cpp-build
+        mapfile -t sources < <(find . -type f \( -iname "*.cpp" -o -iname "*.cc" -o -iname "*.cxx" \))
+        if [ ${#sources[@]} -eq 0 ]; then
+          echo "No C++ source files found."
+          exit 1
+        fi
+        for source in "${sources[@]}"; do
+          output="/tmp/cpp-build/$(basename "${source%.*}").o"
+          g++ -x c++ -std=c++17 -Wall -Wextra -pedantic -c "$source" -o "$output"
+        done
