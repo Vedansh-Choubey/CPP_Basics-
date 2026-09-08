@@ -20,7 +20,7 @@ int main () {
         if (min > arr[i]){
             min = arr[i];}
     }
-    cout << "Largest element : " << max;<<endl
+    cout << "Largest element : " << max << endl;
     cout << "Smallest element : " << min<<endl;
     return 0;
 }

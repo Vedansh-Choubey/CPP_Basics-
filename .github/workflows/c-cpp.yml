@@ -13,11 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: build
+      run: |
+        set -euo pipefail
+        while IFS= read -r -d '' file; do
+          g++ -std=c++17 -x c++ -fsyntax-only "$file"
+        done < <(find . -type f \( -name "*.cpp" -o -name "*.Cpp" -o -name "*.CPP" \) -print0)
